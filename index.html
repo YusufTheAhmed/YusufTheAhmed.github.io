@@ -1,51 +1,135 @@
+<!-- Page d'accueil (index.html) -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: auto;
-        }
-        img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .socials a {
-            text-decoration: none;
-            margin: 0 10px;
-            color: #007BFF;
-        }
-    </style>
+    <title>Portfolio Web</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="profile.jpg" alt="Profile Picture">
-        <h1>Yusuf Ahmed</h1>
-        <p>I'm a high school student passionate about sports, coding, and exploring new things.</p>
-        <p>I enjoy playing basketball, soccer, and piano in my free time.</p>
-        <div class="socials">
-            <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
-        </div>
-    </div>
+    <header>
+        <h1>Bienvenue sur mon Portfolio Web</h1>
+        <nav>
+            <ul>
+                <li><a href="poeme.html">Poème</a></li>
+                <li><a href="voyage.html">Voyage</a></li>
+                <li><a href="biographie.html">Biographie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Ce site présente mes projets HTML et CSS.</p>
+    </main>
 </body>
 </html>
+
+<!-- Poème (poeme.html) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Poème</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Mon Poème Préféré</h1>
+    <p><em>Voici un poème que j'aime beaucoup.</em></p>
+    <p>Source: <a href="URL_DU_POEME">Lien vers le poème</a></p>
+    <img src="images/poeme.jpg" alt="Image poétique">
+    <a href="index.html">Retour à l'accueil</a>
+</body>
+</html>
+
+<!-- Voyage (voyage.html) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage Parfait</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Mon Voyage de Rêve</h1>
+    <p>Destination: <strong>Japon</strong></p>
+    <ul>
+        <li>Voir le Mont Fuji</li>
+        <li>Visiter Tokyo</li>
+        <li>Déguster des sushis authentiques</li>
+    </ul>
+    <img src="images/japon.jpg" alt="Mont Fuji">
+    <a href="index.html">Retour à l'accueil</a>
+</body>
+</html>
+
+<!-- Biographie (biographie.html) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>À propos de moi</h1>
+    <img src="images/moi.jpg" alt="Ma photo">
+    <p>Nom: <strong>Yusuf Ahmed</strong></p>
+    <p>Passions: Basketball, programmation, musique</p>
+    <p>Liens préférés:</p>
+    <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="https://www.w3schools.com">W3Schools</a></li>
+    </ul>
+    <h2>Mes Compétences Technologiques</h2>
+    <table border="1">
+        <tr>
+            <th>Langage</th>
+            <th>Niveau</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Expert</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Compétent</td>
+        </tr>
+    </table>
+    <a href="index.html">Retour à l'accueil</a>
+</body>
+</html>
+
+<!-- Styles CSS (css/styles.css) -->
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+}
