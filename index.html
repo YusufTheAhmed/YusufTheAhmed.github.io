@@ -1,135 +1,93 @@
-<!-- Page d'accueil (index.html) -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Web</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio Web - Yusuf Ahmed</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h1 {
+            color: #333;
+            margin-top: 15px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .menu-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: white;
+            background: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+        .menu-btn:hover {
+            background: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur mon Portfolio Web</h1>
-        <nav>
-            <ul>
-                <li><a href="poeme.html">Poème</a></li>
-                <li><a href="voyage.html">Voyage</a></li>
-                <li><a href="biographie.html">Biographie</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <p>Ce site présente mes projets HTML et CSS.</p>
-    </main>
+    <div class="container">
+        <header>
+            <h1>Bienvenue sur mon Portfolio Web</h1>
+            <nav>
+                <ul>
+                    <li><a href="poeme.html">Poème</a></li>
+                    <li><a href="voyage.html">Voyage</a></li>
+                    <li><a href="biographie.html">Biographie</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p>Ce site présente mes projets HTML et CSS.</p>
+        </main>
+        <a href="#" class="menu-btn">En savoir plus</a>
+    </div>
 </body>
 </html>
-
-<!-- Poème (poeme.html) -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Poème</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <h1>Mon Poème Préféré</h1>
-    <p><em>Voici un poème que j'aime beaucoup.</em></p>
-    <p>Source: <a href="URL_DU_POEME">Lien vers le poème</a></p>
-    <img src="images/poeme.jpg" alt="Image poétique">
-    <a href="index.html">Retour à l'accueil</a>
-</body>
-</html>
-
-<!-- Voyage (voyage.html) -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voyage Parfait</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <h1>Mon Voyage de Rêve</h1>
-    <p>Destination: <strong>Japon</strong></p>
-    <ul>
-        <li>Voir le Mont Fuji</li>
-        <li>Visiter Tokyo</li>
-        <li>Déguster des sushis authentiques</li>
-    </ul>
-    <img src="images/japon.jpg" alt="Mont Fuji">
-    <a href="index.html">Retour à l'accueil</a>
-</body>
-</html>
-
-<!-- Biographie (biographie.html) -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biographie</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <h1>À propos de moi</h1>
-    <img src="images/moi.jpg" alt="Ma photo">
-    <p>Nom: <strong>Yusuf Ahmed</strong></p>
-    <p>Passions: Basketball, programmation, musique</p>
-    <p>Liens préférés:</p>
-    <ul>
-        <li><a href="https://github.com">GitHub</a></li>
-        <li><a href="https://www.w3schools.com">W3Schools</a></li>
-    </ul>
-    <h2>Mes Compétences Technologiques</h2>
-    <table border="1">
-        <tr>
-            <th>Langage</th>
-            <th>Niveau</th>
-        </tr>
-        <tr>
-            <td>HTML</td>
-            <td>Expert</td>
-        </tr>
-        <tr>
-            <td>CSS</td>
-            <td>Compétent</td>
-        </tr>
-    </table>
-    <a href="index.html">Retour à l'accueil</a>
-</body>
-</html>
-
-<!-- Styles CSS (css/styles.css) -->
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-}
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-table {
-    margin: auto;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 10px;
-    border: 1px solid black;
-}
