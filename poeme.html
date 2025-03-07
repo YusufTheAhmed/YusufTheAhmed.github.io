@@ -3,68 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Mon Poème</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
         .container {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
             max-width: 600px;
-            margin: auto;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
         }
         img {
             width: 150px;
             border-radius: 50%;
             margin-bottom: 15px;
+            border: 4px solid #74ebd5;
         }
         h1 {
             color: #333;
+            font-size: 26px;
         }
         p {
-            color: #666;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
-        .socials a {
+        .menu-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background: #007BFF;
             text-decoration: none;
-            margin: 0 10px;
-            color: #007BFF;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+        .menu-btn:hover {
+            background: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="profile.jpg" alt="Profile Picture">
-        <h1>Mon poeme</h1> 
-        <p>In your eyes, I see the sunrise,
-A warmth that melts the night away.
-You hold my hand, and in that touch,
-I feel the world shift and sway.
-</p>
-        <p>Your laughter, like music, fills my soul,
-A melody that guides me home.
-In every glance, a thousand words,
-No need for silence, no need to roam.
-</p>
-        <p>Through your smile, I find my peace,
-A quiet love that never fades.
-With you, the storm becomes a breeze,
-And within your heart is where my cares are set.
-
-</p>
-        <p>Together we build up our tale, brick by brick,
-Into a world where dreams and hopes collide.
-Within you, I find strength to grow,
-My love for you, an endless tide.
-
-.</p>
-           <a href="index.html">Menu</a>
-
+        <h1>Mon Poème</h1> 
+        <p>In your eyes, I see the sunrise,<br>A warmth that melts the night away.<br>You hold my hand, and in that touch,<br>I feel the world shift and sway.</p>
+        <p>Your laughter, like music, fills my soul,<br>A melody that guides me home.<br>In every glance, a thousand words,<br>No need for silence, no need to roam.</p>
+        <p>Through your smile, I find my peace,<br>A quiet love that never fades.<br>With you, the storm becomes a breeze,<br>And within your heart is where my cares are set.</p>
+        <p>Together we build up our tale, brick by brick,<br>Into a world where dreams and hopes collide.<br>Within you, I find strength to grow,<br>My love for you, an endless tide.</p>
+        <a href="index.html" class="menu-btn">Menu</a>
     </div>
 </body>
 </html>
