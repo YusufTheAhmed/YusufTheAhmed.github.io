@@ -1,93 +1,90 @@
 <!DOCTYPE html>
-<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Web - Yusuf Ahmed</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #74ebd5, #acb6e5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-            max-width: 700px;
-            text-align: center;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            border-radius: 10px 10px 0 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        h1 {
-            color: #333;
-            margin-top: 15px;
-        }
-        p {
-            color: #555;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .menu-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            font-size: 16px;
-            color: white;
-            background: #007BFF;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s ease-in-out;
-        }
-        .menu-btn:hover {
-            background: #0056b3;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA compatible" content="IE=edge">
+    <title>Navbar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bienvenue sur mon Portfolio Web</h1>
-            <nav>
-                <ul>
-                    <li><a href="poeme.html">Poème</a></li>
-                    <li><a href="voyage.html">Voyage</a></li>
-                    <li><a href="biographie.html">Biographie</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <p>Ce site présente mes projets HTML et CSS.</p>
-        </main>
-        <a href="#" class="menu-btn">En savoir plus</a>
-    </div>
+    <header>
+        <img class="logo" src="c:\Users\13435\Downloads\Illustration-of-logo-design-template-on-transparent-background-PNG (1).png" width="145" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="poeme.html">Poème</a></li>
+                <li><a href="voyage.html">Voyage</a></li>
+                <li><a href="biographie.html">Biographie</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href=""><button>Contact</button></a>
+    </header>
+    <img class="home" src="c:\Users\13435\Downloads\unnamed (1).jpg" width="500">
 </body>
-</html>
+</hmtl>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;  
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 3%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3 ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+.home {
+    border-radius: 20%;
+    position: center;
+padding: 20px 50px;
+
+}
+
+
+button {
+    padding: 9px 25px;
+    background-color:rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color:rgba(0, 135, 169, 0.8) ;
+}
