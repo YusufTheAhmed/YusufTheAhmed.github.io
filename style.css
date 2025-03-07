@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: black;
 }
 
-li, a, button{
+li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;  
     font-size: 16px;
@@ -20,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 3%;
+    background-color: black;
 }
 
 .logo {
@@ -45,15 +49,13 @@ header {
 
 .home {
     border-radius: 20%;
-    position: center;
-padding: 20px 50px;
-
+    display: block;
+    margin: 20px auto;
 }
-
 
 button {
     padding: 9px 25px;
-    background-color:rgba(0,136,169,1);
+    background-color: rgba(0, 136, 169, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -61,5 +63,5 @@ button {
 }
 
 button:hover {
-    background-color:rgba(0, 135, 169, 0.8) ;
+    background-color: rgba(0, 135, 169, 0.8);
 }
