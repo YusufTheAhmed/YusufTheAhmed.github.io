@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Poème</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
         * {
@@ -15,7 +16,7 @@
             font-family: 'Montserrat', sans-serif;
             background-color: black;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -64,9 +65,55 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        header {
+            width: 100%;
+            background: #1c1c1c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+        .logo {
+            width: 145px;
+        }
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+        .nav_links li {
+            padding: 0 20px;
+        }
+        .nav_links a {
+            text-decoration: none;
+            color: #edf0f1;
+            font-size: 18px;
+        }
+        .cta button {
+            padding: 10px 20px;
+            border: none;
+            background: #0088a9;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cta button:hover {
+            background: rgba(0, 135, 169, 0.8);
+        }
     </style>
 </head>
 <body>
+    <header>
+        <img class="logo" src="images/Illustration-of-logo-design-template-on-transparent-background-PNG_processed.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="poeme.html">Poème</a></li>
+                <li><a href="voyage.html">Voyage</a></li>
+                <li><a href="biographie.html">Biographie</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href=""><button>Contact</button></a>
+    </header>
+    
     <div class="container">
         <img src="images/841651_WP.jpg" alt="Profile Picture">
         <h1>Mon Poème</h1> 
