@@ -1,1 +1,79 @@
-<h1>hi this is gonna be my voyage au japan</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voyage au Japon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .place {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .place:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index2.html">Menu</a></li>
+                <li><a href="poeme.html">Poème</a></li>
+                <li><a href="voyage.html">Voyage</a></li>
+                <li><a href="biographie.html">Biographie</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Contact</button></a>
+    </header>
+    
+    <div class="container">
+        <h1>Voyage au Japon</h1>
+        <p>Découvrez les lieux incontournables du Japon à visiter !</p>
+        
+        <div class="place">
+            <h2>Tokyo - La Capitale Futuriste</h2>
+            <img src="https://www.japan-guide.com/g18/3009_01.jpg" alt="Tokyo">
+            <p>Explorez la ville ultra-moderne de Tokyo avec ses gratte-ciel lumineux, ses quartiers animés comme Shibuya et Akihabara, et ses temples historiques comme Sensō-ji.</p>
+        </div>
+        
+        <div class="place">
+            <h2>Kyoto - La Ville des Temples</h2>
+            <img src="https://www.japan-guide.com/g18/3009_02.jpg" alt="Kyoto">
+            <p>Découvrez les magnifiques temples et jardins de Kyoto, dont le célèbre Fushimi Inari et le Pavillon d’Or (Kinkaku-ji).</p>
+        </div>
+        
+        <div class="place">
+            <h2>Osaka - La Capitale de la Cuisine</h2>
+            <img src="https://www.japan-guide.com/g18/3009_03.jpg" alt="Osaka">
+            <p>Dégustez des spécialités japonaises comme l’Okonomiyaki et le Takoyaki tout en profitant de l’atmosphère vibrante de Dotonbori.</p>
+        </div>
+    </div>
+</body>
+</html>
