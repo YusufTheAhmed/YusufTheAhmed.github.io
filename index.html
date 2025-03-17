@@ -4,23 +4,102 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Navbar</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        li, a, button {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;  
+            font-size: 16px;
+            color: #edf0f1;
+            text-decoration: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 20px;
+        }
+
+        td {
+            width: 200px;
+            height: 650px;
+            border: 5px solid #edf0f1;
+            vertical-align: middle;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+
+        td:hover {
+            opacity: 0.8;
+        }
+
+        /* Add images to squares */
+        .square1 {
+            background-image: url('https://img.freepik.com/premium-vector/opened-book-with-ink-feather-tool-illustration-white-background_149267-1217.jpg');
+        }
+
+        .square2 {
+            background-image: url('https://rowatinsurance.com/assets/blog-images/do-these-7-things-before-leaving-on-summer-vaction.jpg');
+        }
+
+        .square3 {
+            background-image: url('https://mma.prnewswire.com/media/1909155/METRO_INC__METRO_Inc__to_launch_MO___a_more_personalized_and_gen.jpg');
+        }
+
+        /* Make the entire <td> clickable */
+        td a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <img class="logo" src="images/Illustration-of-logo-design-template-on-transparent-background-PNG_processed.png" width="145" alt="logo">
+        <img class="logo" src="c:\Users\13435\Downloads\Illustration-of-logo-design-template-on-transparent-background-PNG (1).png" width="145" alt="logo">
         <nav>
             <ul class="nav_links">
-                <li><a href="index.html">Menu</a></li>
+                <li><a href="index2.html">Menu</a></li>
                 <li><a href="poeme.html">Poème</a></li>
                 <li><a href="voyage.html">Voyage</a></li>
                 <li><a href="biographie.html">Biographie</a></li>
             </ul>
         </nav>
-        <a class="cta" href=""><button>Contact</button></a>
+        <a class="cta" href="#"><button>Contact</button></a>
     </header>
-    <img class="home" src="" width="500">
+
+    <table>
+        <tr>
+            <td class="square1"><a href="poeme.html">Poème</a></td>
+            <td class="square2"><a href="voyage.html">Voyage</a></td>
+            <td class="square3"><a href="biographie.html">Biographie</a></td>
+        </tr>
+    </table>
+
 </body>
 </html>
