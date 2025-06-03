@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Poème</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voyage au Japon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            background-color: white;
+            color: black;
+            font-family: "Montserrat", sans-serif;
         }
         .container {
-            background: #1c1c1c;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
             text-align: center;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            border: 4px solid #0088a9;
+            padding: 50px;
         }
         h1 {
-            color: #edf0f1;
-            font-size: 26px;
+            font-size: 36px;
+            margin-bottom: 20px;
         }
-        p {
-            color: #edf0f1;
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 15px;
+        .place {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
         .menu-btn {
             display: inline-block;
@@ -57,54 +41,19 @@
             border-radius: 50px;
             transition: 0.3s ease-in-out;
             border: none;
+        }  
+        .place:hover {
+            transform: scale(1.05);
         }
-        .menu-btn:hover {
-            background: rgba(0, 135, 169, 0.8);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        header {
-            width: 100%;
-            background: #1c1c1c;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        .logo {
-            width: 120px;
-        }
-        .nav_links {
-            list-style: none;
-            display: flex;
-        }
-        .nav_links li {
-            padding: 0 15px;
-        }
-        .nav_links a {
-            text-decoration: none;
-            color: #edf0f1;
-            font-size: 16px;
-        }
-        .cta button {
-            padding: 8px 16px;
-            border: none;
-            background: #0088a9;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .cta button:hover {
-            background: rgba(0, 135, 169, 0.8);
+        img {
+            width: 70%;
+            max-width: 600px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img class="logo" src="images/Illustration-of-logo-design-template-on-transparent-background-PNG_processed.png" alt="logo">
         <nav>
             <ul class="nav_links">
                 <li><a href="index.html">Menu</a></li>
@@ -113,17 +62,37 @@
                 <li><a href="biographie.html">Biographie</a></li>
             </ul>
         </nav>
-        <a class="cta" href=""><button>Contact</button></a>
+        <a class="cta" href="#"><button>Contact</button></a>
     </header> <!-- Source: https://www.youtube.com/watch?v=PwWHL3RyQgk&ab_channel=Skillthrive-->
+
     
     <div class="container">
-        <img src="images/841651_WP.jpg" alt="Profile Picture">
-        <h1>Mon Poème</h1> 
-        <p>In your eyes, I see the sunrise,<br>A warmth that melts the night away.<br>You hold my hand, and in that touch,<br>I feel the world shift and sway.</p>
-        <p>Your laughter, like music, fills my soul,<br>A melody that guides me home.<br>In every glance, a thousand words,<br>No need for silence, no need to roam.</p>
-        <p>Through your smile, I find my peace,<br>A quiet love that never fades.<br>With you, the storm becomes a breeze,<br>And within your heart is where my cares are set.</p>
-        <p>Together we build up our tale, brick by brick,<br>Into a world where dreams and hopes collide.<br>Within you, I find strength to grow,<br>My love for you, an endless tide.</p>
-        <a href="index.html" class="menu-btn">Menu</a>
+        <h1>Toys4U</h1>
+        <p>Bonjour à tous, nous sommes Toys4u et nous sommes heureux d'annoncer notre grande ouverture. Nous sommes une petite entreprise de jouets pour enfants qui cherche à aider et à faire de chaque rêve d'enfant une réalité. Nous avons quelques articles dans notre inventaire ci-dessous, n'hésitez pas à regarder comme bon vous semble, merci beaucoup et nous espérons tous voir vos sourires :)</p>
+        
+        <div class="place">
+            <h2>Lego - Starwars</h2>
+            <img src="https://i.ebayimg.com/images/g/afEAAOSwtxdegw~s/s-l1200.jpg" alt="Tokyo">
+            <p>LEGO® Star Wars™ 75257 - Millennium™ Falcon - 1351 Buildable Parts-</p>
+            <p>Quantité:</p>
+            <input type="number" min="0" max="10" value="0" step="1" onkeypress="return false;" />
+            
+            <a href="index.html" class="menu-btn">Achete</a>
+        </div>
+        
+        <div class="place">
+            <h2>Voiture - Lamborghini-Sian-FKP-37</h2>
+            <img src="https://leantoys.com/hpeciai/9b71db6217891ce8f57a802fd1b54d36/eng_pl_Construction-Blocks-Auto-R-C-1-18-Lamborghini-Sian-FKP-37-12814_4.jpg" alt="Kyoto">
+            <p>Construction Blocks Auto R/C 1:18 Lamborghini Sian FKP 37</p>
+            <a href="index.html" class="menu-btn">Achete</a>
+        </div>
+        
+        <div class="place">
+            <h2>Cachier a painture</h2>
+            <img src="https://images.archambault.ca/images/PG/1954/1954545-gf.jpg" alt="Osaka">
+            <p>Akihabara (秋葉原) est un quartier situé dans l'arrondissement de Chiyoda à Tokyo, généralement considéré comme la zone autour de la station d'Akihabara, surnommée Akihabara Electric Town. Ce quartier est le centre de la culture otaku japonaise et un important district commercial pour les jeux vidéo, l'anime, le manga, l'électronique et les produits informatiques.</p>
+            <a href="index.html" class="menu-btn">Achete</a>
+        </div>
     </div>
 </body>
 </html>
