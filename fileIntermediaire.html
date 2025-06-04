@@ -1,1 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Toys4U – Boutique de jouets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            font-family: "Montserrat", sans-serif;
+        }
+        header {
+            background-color: #0088a9;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            max-height: 60px;
+        }
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .place {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .place:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 70%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .menu-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #edf0f1;
+            background: #0088a9;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        label {
+            font-weight: 600;
+        }
+        input[type="number"] {
+            width: 70px;
+            margin-left: 0.5rem;
+            text-align: center;
+        }
+        #summary {
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 2px solid #000;
+        }
+        #summary h2 {
+            margin-bottom: 10px;
+        }
+        #confirmation-message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+        /* Style pour bouton Acheter */
+        #buy-btn {
+            background-color: #28a745;
+            margin-top: 20px;
+            color: white;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="toys4u-logo.png" alt="Toys4U Logo">
+    </header>
+    <div class="container">
+        <h1>Toys4U</h1>
+        <p>Bonjour à tous, nous sommes Toys4U et nous sommes heureux d'annoncer notre grande ouverture. Nous sommes une petite entreprise de jouets pour enfants qui cherche à aider et à faire de chaque rêve d'enfant une réalité. Nous avons quelques articles dans notre inventaire ci-dessous, n'hésitez pas à regarder comme bon vous semble, merci beaucoup et nous espérons tous voir vos sourires :)</p>
+
+
+        <!-- LEGO Star Wars -->
+        <div class="place" data-price="12.98" data-name="LEGO Star Wars Millennium Falcon">
+            <h2>LEGO – Star Wars™ Millenium Falcon</h2>
+            <img src="https://i.ebayimg.com/images/g/afEAAOSwtxdegw~s/s-l1200.jpg" alt="LEGO Star Wars">
+            <p>LEGO® Star Wars™ 75257 – Millennium™ Falcon – 1351 pièces</p>
+            <div class="price">12.98$</div>
+            <label>Quantité:</label>
+            <input class="qty" type="number" min="0" max="10" value="0" step="1" />
+            <button class="menu-btn">Ajouter au panier</button>
+        </div>
+
+
+        <!-- Lamborghini Sian -->
+        <div class="place" data-price="20.98" data-name="Lamborghini Sian FKP-37">
+            <h2>Voiture – Lamborghini Sian FKP-37</h2>
+            <img src="https://leantoys.com/hpeciai/9b71db6217891ce8f57a802fd1b54d36/eng_pl_Construction-Blocks-Auto-R-C-1-18-Lamborghini-Sian-FKP-37-12814_4.jpg" alt="Lamborghini Sian">
+            <p>Construction Blocks Auto R/C 1:18 Lamborghini Sian FKP-37</p>
+            <div class="price">20.98$</div>
+            <label>Quantité:</label>
+            <input class="qty" type="number" min="0" max="10" value="0" step="1" />
+            <button class="menu-btn">Ajouter au panier</button>
+        </div>
+
+
+        <!-- Cahier à colorier -->
+        <div class="place" data-price="10.98" data-name="Cahier à coloriage Pat' Patrouille">
+            <h2>Cahier à coloriage</h2>
+            <img src="https://images.archambault.ca/images/PG/1954/1954545-gf.jpg" alt="Cahier à coloriage Pat' Patrouille">
+            <p>Cahier à coloriage géant – Pat' Patrouille</p>
+            <div class="price">10.98$</div>
+            <label>Quantité:</label>
+            <input class="qty" type="number" min="0" max="10" value="0" step="1" />
+            <button class="menu-btn">Ajouter au panier</button>
+        </div>
+
+
+        <!-- Summary Section -->
+        <div id="summary">
+            <h2>Résumé de la commande</h2>
+            <ul id="items"></ul>
+            <p id="subtotal"></p>
+            <p id="discount"></p>
+            <p id="taxes"></p>
+            <p id="total"></p>
+            <p id="confirmation-message"></p>
+        </div>
+
+
+        <!-- Bouton Acheter -->
+        <button id="buy-btn" class="menu-btn">Acheter</button>
+    </div>
+
+
+    <script>
+        /*
+        Bibliographie & Ressources utiles pour ce script :
+
+
+        - Créer un panier d'achat côté client avec JavaScript – Smashing Magazine
+          https://www.smashingmagazine.com/2014/02/create-client-side-shopping-cart/
+
+
+        - Panier d'achat avec stockage Web HTML5 – Smashing Magazine
+          https://www.smashingmagazine.com/2019/08/shopping-cart-html5-web-storage/
+
+
+        - Tutoriel vidéo : coder un panier d'achat avec JavaScript – freeCodeCamp
+          https://www.freecodecamp.org/news/code-a-shopping-cart-with-javascript/
+
+
+        - 5 étapes pour créer un site e-commerce réussi – Cap Connect
+          https://www.capconnect.com/blog/en/how-to-build-a-e-commerce-website/
+        */
+
+
+        function formatDollar(value) {
+            return value.toFixed(2) + '$';
+        }
+
+
+        const summaryItems = document.getElementById("items");
+        const subtotalEl = document.getElementById("subtotal");
+        const discountEl = document.getElementById("discount");
+        const taxesEl = document.getElementById("taxes");
+        const totalEl = document.getElementById("total");
+        const confirmationMsg = document.getElementById("confirmation-message");
+        const buyBtn = document.getElementById("buy-btn");
+
+
+        const updateSummary = () => {
+            let totalBeforeTax = 0;
+            let summaryList = "";
+            let hasPurchase = false;
+
+
+            document.querySelectorAll(".place").forEach(place => {
+                const name = place.dataset.name;
+                const price = parseFloat(place.dataset.price);
+                const qty = parseInt(place.querySelector(".qty").value, 10) || 0;
+                if (qty > 0) {
+                    const itemTotal = qty * price;
+                    totalBeforeTax += itemTotal;
+                    summaryList += `<li>${qty} x ${name} = ${formatDollar(itemTotal)}</li>`;
+                    hasPurchase = true;
+                }
+            });
+
+
+            summaryItems.innerHTML = summaryList;
+            subtotalEl.textContent = `Sous-total : ${formatDollar(totalBeforeTax)}`;
+
+
+            let discount = 0;
+            if (totalBeforeTax > 100) {
+                discount = totalBeforeTax * 0.10;
+                discountEl.textContent = `Rabais 10% : -${formatDollar(discount)}`;
+            } else {
+                discountEl.textContent = "Rabais 10% : Aucun";
+            }
+
+
+            const totalAfterDiscount = totalBeforeTax - discount;
+            const tax = totalAfterDiscount * 0.13;
+            const finalTotal = totalAfterDiscount + tax;
+
+
+            taxesEl.textContent = `Taxes (13%) : ${formatDollar(tax)}`;
+            totalEl.textContent = `Total final : ${formatDollar(finalTotal)}`;
+
+
+            
+            confirmationMsg.textContent = "";
+        };
+
+
+       
+        buyBtn.addEventListener("click", () => {
+            if (summaryItems.innerHTML.trim() !== "") {
+                confirmationMsg.textContent = "Merci pour votre achat ! :)";
+            } else {
+                confirmationMsg.textContent = "Votre panier est vide.";
+            }
+        });
+
+
+        // Mettre à jour le résumé quand on clique sur "Ajouter au panier"
+        document.querySelectorAll(".menu-btn").forEach(btn => {
+           
+            if (btn !== buyBtn) {
+                btn.addEventListener("click", updateSummary);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
 
